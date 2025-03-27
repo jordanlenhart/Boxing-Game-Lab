@@ -80,3 +80,6 @@ function switchTurns() {
     }
     // Start the game
     startGame();
+
+
+    
