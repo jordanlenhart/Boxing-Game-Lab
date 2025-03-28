@@ -23,15 +23,15 @@ function generateDamage() {
     
     // Function to apply damage to the opponent
 function applyDamage(opponent, damage) {
-    if (generateDamage < 7) {
+    if (damage < 6) {
     console.log(`${currentPlayer.name} lands a basic hit on ${opponent.name}!`);
-    } else if (generateDamage < 10) {
+    } else if (damage < 10) {
     console.log(`${currentPlayer.name} lands a critical hit on ${opponent.name}!`);
     } else {
     console.log(`${currentPlayer.name} lands a KNOCKOUT on ${opponent.name}!🥊`);
     }
     opponent.health -= damage;
-    if (opponent.health < 0 || currentPlayer.health <0) {
+    if (opponent.health < 0 || currentPlayer.health < 0) {
     // Ensure health doesn't go below 0 and automatic KO
     opponent.health = 0;
     }
